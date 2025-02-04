@@ -325,20 +325,42 @@
             transition: transform 0.3s ease;
         }
         /*Video Background*/
-        .Vid {
+        .video {
           position: fixed;
   right: 0;
   bottom: 0;
   min-width: 100%; 
   min-height: 100%;
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
         }
-            #myVideo {
+        .viewport-header {
+  position: relative;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+    #myVideo {
   position: fixed;
   right: 0;
   bottom: 0;
   min-width: 100%; 
   min-height: 100%;
-            }
+}
+.heading{
+  background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient 8s linear infinite;
+}
+
   </style>
   
   <body>
@@ -346,7 +368,7 @@
     <video autoplay muted loop id="myVideo">
         <source class="video" src="mc.mp4" type="video/mp4">
         Your browser does not support HTML5 video.
-    </video>
+      </video>
       
     <nav class="navbar">
         <div class="navbar-container">
@@ -360,18 +382,17 @@
             
         </div>
     </nav>
-    
+   
     <div class="overlay"></div>
-         
-    
+     
+    <div class="viewport-header">
+    <div class="card">
 <div class="main-container">
-      
-      <div class="card">
   <div class="content">
   
         <div class="bg-effect bg-effect-1"></div>
         <div class="section-content">
-          <h1 class="text-white">Media/Creator Role Application </h1>
+          <h1 class="heading">Media/Creator Role Application </h1>
            
             <p class="text-white">
                Are you interested in promoting your social media accounts to this SMP? If so you have come to the right place. You can create videos about the SMP and gain the Media Role in the Discord server just by filling the form given below! The Media Rank will be decided on the views you get not the total number of subscribers of your channel.</p>
@@ -536,4 +557,5 @@ for (i = 0; i < close.length; i++) {
        
        <div class="footer">All Rights Reserved. Copyright© 2025-2025 Luminous SMP.</div>
        </footer>
+       </div>
     </html>
