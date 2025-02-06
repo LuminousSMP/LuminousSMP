@@ -440,39 +440,37 @@ if (preg_match($pattern, $password)) {
 }
 
 ?>
-        <form action="checkPassword()">
-            <label for="first">
-                Username:
-            </label>
-            <input type="text" id="first" name="first" 
-                placeholder="Enter your Username" required>
+        <form onsubmit="checkPassword(event)">
+    <label for="first">Username:</label>
+    <input type="text" id="first" name="first" placeholder="Enter your Username" required>
 
-            <label for="password">
-                Password:
-            </label>
-            <input value="password" type="text" id="passwordBox" name="password" 
-                placeholder="Enter the TOP-SECRET Password" required>
+    <label for="passwordBox">Password:</label>
+    <input type="password" id="passwordBox" name="password" placeholder="Enter the TOP-SECRET Password" required>
 
-            <div class="wrap">
-                <button type="submit" type="button"value="Run" onclick="checkPassword()">
-                    Submit
-                </button>
-                
-                </div>
+    <div class="wrap">
+        <button type="submit">Submit</button>
+    </div>
+</form>
+
+<!-- This will display the error message -->
+<p id="result"></p>
 <script>
-  function checkPassword() {
-      let password = document.getElementById("passwordInput").value;
-      let result = document.getElementById("result");
-      if (password === "ihateveganslol") {
-        // Redirect to a new page
-window.location.href = "Staff_Dashboard.html";
+  function checkPassword(event) {
+      event.preventDefault(); // Prevents form submission
+      
+      let enteredPassword = document.getElementById("passwordBox").value;
+      let correctPassword = "ihateveganslol"; // Your actual password
+      let resultMessage = document.getElementById("result");
 
-// Or, using the assign() method
-window.location.assign("Staff_Dashboard.html"); 
+      if (enteredPassword === correctPassword) {
+          // Redirect to the dashboard if password is correct
+          window.location.href = "Staff_Dashboard.html";
       } else {
-        result.textContent = "Incorrect Password";
+          // Show error message if password is wrong
+          resultMessage.textContent = "Incorrect Password. Try again!";
+          resultMessage.style.color = "red";
       }
-    }
+  }
 </script>
             </div>
         </form>
