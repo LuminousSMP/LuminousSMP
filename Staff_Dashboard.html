@@ -1,5 +1,11 @@
 <!DOCTYPE html>
       <html>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.checked {
+  color: orange;
+}
+</style>
         
 
     
@@ -318,11 +324,26 @@
             border: 1px solid rgba(76, 175, 80, 0.2);
             transition: transform 0.3s ease;
         }
+         #myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+.heading{
+  background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient 8s linear infinite;
+}
   </style>
+  
   <body>
       <!--Background-->
     <video autoplay muted loop id="myVideo">
-        <source src="mc.mp4" type="video/mp4">
+        <source src="tech.mp4" type="video/mp4">
         Your browser does not support HTML5 video.
       </video>
       
@@ -353,50 +374,101 @@
   
         <div class="bg-effect bg-effect-1"></div>
         <div class="section-content">
-            <h1 class="section-title">Welcome</h1>
+          <marquee height="100"direction="right"><h1 class="heading"> 
+          Admin Dashboard</h1></marquee>
+            
             <p class="text-white">
-              Welcome to Luminous SMP, a vibrant and dynamic Minecraft survival multiplayer server where adventure, creativity, and community come together! Whether you're a seasoned builder, a fearless explorer, or a redstone mastermind, Luminous SMP offers a rich and immersive experience for all players.</p>
-<p class="text-white">
-Step into a world where the landscape is alive with stunning builds, breathtaking landscapes, and limitless opportunities. Work together with friends to create thriving towns, take on daring challenges, or forge your own path in the wilderness. With a friendly and supportive player base, Luminous SMP is more than just a server it's a family of passionate Minecraft enthusiasts.</p>
-<p class="text-white">
-Our server is designed to balance survival gameplay with exciting custom features, providing an engaging experience without losing the essence of vanilla Minecraft. Expect thrilling events, unique in-game mechanics, and a welcoming community that fosters collaboration and fun. Whether you prefer to build grand structures, uncover hidden loot, or engage in epic battles, there is always something new to discover.</p>
-<p class="text-white">
-Join us in Luminous SMP, where every block placed tells a story, every adventure is unforgettable, and the possibilities are endless. Are you ready to shine? The journey starts now!</p>
+               Welcome to the Admin Dashboard. Admins can make announcements to the server and whitelist people from here. There are many other features other than these. This is an admins only page and sharing access to this page is strictly prohibited. Giving access to this page to unauthorized people will result in permanent ban.</p>
+               <p class="text-white">
+               </p>
 
-<p class="text-white">
-              Experience the greatness of Luminous SMP by joining the Discord Server!  </p>
-        </div>
-    
-    <div class="w3-panel w3-leftbar w3-light-grey">
-                        <p class="w3-xlarge w3-serif"><i>"Luminous SMP is better than Hypixel lol."</i></p>
-                        <p>Sun Tzu, The Art Of War</p>
-                      </div>
-    
     <style>
-       /* Server Status */
-        .server-status {
-          color:white;
-            font-size: 1.2rem;
-            padding: 1rem;
-            border-radius: 4px;
-             background: #5f73bc;
-            display: inline-block;
-            margin-bottom: 1rem;
-        }
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  opacity: 1;
+  transition: opacity 0.6s;
+  margin-bottom: 15px;
+}
+.alert.success {background-color: #04AA6D;}
+.alert.info {background-color: #2196F3;}
+.alert.warning {background-color: #ff9800;}
 
-        .status-online {
-            color: white;
-        }
-    </style>
-                    
-                    <div class="server-status">
-                        Status: <span class="status-online">Online</span>
-                    </div>
-                    <p class="text-white">IP: TheLuminousSMP.apexmc.co</p>
-                </div>
-                </div>
-    <section id="about">
-        <div class="bg-effect bg-effect-2"></div>
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: 
+  .alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  opacity: 1;
+  transition: opacity 0.6s;
+  margin-bottom: 15px;
+}
+
+.alert.success {background-color: #04AA6D;}
+.alert.info {background-color: #2196F3;}
+.alert.warning {background-color: #ff9800;}
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.closebtn:hover {
+  color: black;
+}
+</style>
+    <div class="alert info">
+  <span class="closebtn">&times;</span>  
+  <strong>Info!</strong> If any issue occurs in the website report to Dweesh immediately.
+<div class="card">
+  <h2 class="text-white"><a href="#">Whitelist</a></h2>
+ <marquee><p class="text-white">
+  Usernames of people who filled in the Whitelist Form will be sent here every 24 hours.
+  </p>
+  </marquee>
+</div>
+<div class="card">
+  <h2 class="text-white">Announce Anything</h2>
+ <marquee direction="right"><p class="text-white">
+  Make any announcements in the website here.
+  </p>
+  </marquee>
+</div>
+<div class="card">
+  <h2 class="text-white">Staff Announcements</h2>
+ <marquee><p class="text-white">
+  Nothing new at the moment...
+  </p>
+  </marquee>
+</div>
+
+<script>
+var close = document.getElementsByClassName("closebtn");
+var i;
+
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function(){
+    var div = this.parentElement;
+    div.style.opacity = "0";
+    setTimeout(function(){ div.style.display = "none"; }, 600);
+  }
+}
+</script>
+  
+                      </div>
+  
+                
+    
       
 
  
@@ -414,8 +486,8 @@ Join us in Luminous SMP, where every block placed tells a story, every adventure
               width: 100%;
           }  
        </style>
-       
+       <footer>
        
        <div class="footer">All Rights Reserved. Copyright© 2025-2025 Luminous SMP.</div>
-       
+       </footer>
     </html>

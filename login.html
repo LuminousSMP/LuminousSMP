@@ -317,12 +317,25 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(76, 175, 80, 0.2);
             transition: transform 0.3s ease;
-        }
+         #myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+.heading{
+  background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient 8s linear infinite;
+}
   </style>
   <body>
       <!--Background-->
     <video autoplay muted loop id="myVideo">
-        <source src="mc.mp4" type="video/mp4">
+        <source src="tech.mp4" type="video/mp4">
         Your browser does not support HTML5 video.
       </video>
       
@@ -353,47 +366,135 @@
   
         <div class="bg-effect bg-effect-1"></div>
         <div class="section-content">
-            <h1 class="section-title">Welcome</h1>
-            <p class="text-white">
-              Welcome to Luminous SMP, a vibrant and dynamic Minecraft survival multiplayer server where adventure, creativity, and community come together! Whether you're a seasoned builder, a fearless explorer, or a redstone mastermind, Luminous SMP offers a rich and immersive experience for all players.</p>
-<p class="text-white">
-Step into a world where the landscape is alive with stunning builds, breathtaking landscapes, and limitless opportunities. Work together with friends to create thriving towns, take on daring challenges, or forge your own path in the wilderness. With a friendly and supportive player base, Luminous SMP is more than just a server it's a family of passionate Minecraft enthusiasts.</p>
-<p class="text-white">
-Our server is designed to balance survival gameplay with exciting custom features, providing an engaging experience without losing the essence of vanilla Minecraft. Expect thrilling events, unique in-game mechanics, and a welcoming community that fosters collaboration and fun. Whether you prefer to build grand structures, uncover hidden loot, or engage in epic battles, there is always something new to discover.</p>
-<p class="text-white">
-Join us in Luminous SMP, where every block placed tells a story, every adventure is unforgettable, and the possibilities are endless. Are you ready to shine? The journey starts now!</p>
+            <h1 class="section-title">Staff Login</h1>
+            <style>
+              .main {
+    background-color: ;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    transition: transform 0.2s;
+    width: 500px;
+    text-align: center;
+}
 
-<p class="text-white">
-              Experience the greatness of Luminous SMP by joining the Discord Server!  </p>
-        </div>
-    
-    <div class="w3-panel w3-leftbar w3-light-grey">
-                        <p class="w3-xlarge w3-serif"><i>"Luminous SMP is better than Hypixel lol."</i></p>
-                        <p>Sun Tzu, The Art Of War</p>
-                      </div>
-    
-    <style>
-       /* Server Status */
-        .server-status {
-          color:white;
-            font-size: 1.2rem;
-            padding: 1rem;
-            border-radius: 4px;
-             background: #5f73bc;
-            display: inline-block;
-            margin-bottom: 1rem;
-        }
+h1 {
+    color: #2196F3;
+}
 
-        .status-online {
-            color: white;
-        }
-    </style>
-                    
-                    <div class="server-status">
-                        Status: <span class="status-online">Online</span>
-                    </div>
-                    <p class="text-white">IP: TheLuminousSMP.apexmc.co</p>
+label {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #555;
+    font-weight: bold;
+}
+
+input {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background-color: #2196F3;
+    width: 100%;
+    font-size: 16px;
+}
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+            </style>
+            <div class="main">
+        <h1></h1>
+        <h3>Enter your login credentials</h3>
+<?php
+
+$password = "ihateveganslol";
+
+$pattern = '/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/';
+
+if (preg_match($pattern, $password)) {
+    echo "Valid Password";
+} else {
+    echo "Invalid Password";
+}
+
+?>
+        <form action="checkPassword()">
+            <label for="first">
+                Username:
+            </label>
+            <input type="text" id="first" name="first" 
+                placeholder="Enter your Username" required>
+
+            <label for="password">
+                Password:
+            </label>
+            <input value="password" type="text" id="passwordBox" name="password" 
+                placeholder="Enter the TOP-SECRET Password" required>
+
+            <div class="wrap">
+                <button type="submit" type="button"value="Run" onclick="checkPassword()">
+                    Submit
+                </button>
+                
                 </div>
+<script>
+  function checkPassword() {
+      let password = document.getElementById("passwordInput").value;
+      let result = document.getElementById("result");
+      if (password === "ihateveganslol") {
+        // Redirect to a new page
+window.location.href = "Staff_Dashboard.html";
+
+// Or, using the assign() method
+window.location.assign("Staff_Dashboard.html"); 
+      } else {
+        result.textContent = "Incorrect Password";
+      }
+    }
+</script>
+            </div>
+        </form>
+        <div>
+          <!--
+  Password: 
+  <input id="password" type="text" />
+  <input id="Button1" type="button" value="Run" onclick="passcheck()" />
+-->
+        <p class="text-white">Forgot password? Contact @Dweesh in the discord server!
+
+                
+            
+        </p>
+    </div>
+
+
+
+    
+    
+    
+    
+    
+                    
+                    
                 </div>
     <section id="about">
         <div class="bg-effect bg-effect-2"></div>
